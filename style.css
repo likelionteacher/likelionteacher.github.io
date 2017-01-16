@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+}
+
+html {
+	font-size: 15px;
+	color: #333333;
+	/* 이 아래는 희망사항; typography */
+	line-height: 1.5;
+	letter-spacing: -0.002em;
+}
+
+
+/* ------------------ */
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/* ------------------ */
+
+/* float 활용
+ * 1. header내에 float 1번
+ * 2. ul내에서 list item float 1번
+*/
+.header {
+	width: 100%;
+	height: 70px;
+	overflow: hidden
+}
+
+.header > h1 {
+	float: left;
+	font-size: 32px;
+	line-height: 70px;
+}
+
+/* list-style 해제 */
+.gnb {
+	float: right;
+	overflow: hidden;
+	list-style: none;
+}
+
+.gnb > li {
+	float: left;
+	margin-right: 20px;
+}
+
+/* 가상 클래스 활용 */
+.gnb > li:last-child {
+	margin-right: 0;
+}
+
+/* anchor 스타일 해제, vertical align(inline) 확인*/
+.gnb > li > a {
+	text-decoration: none;
+	color: inherit;
+	line-height: 70px;
+}
+
+/* anchor 상태 디자인 */
+.gnb > li > a:hover {
+	opacity: 0.5;
+}
+
+
+/* ------------------ */
+
+.landing {
+	width: 100%;
+	height: 600px;
+	color: #ffffff;
+	text-align: center;
+	/* background image 로드만 해도 좋음 */
+	background-image: url("https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=");
+	background-size: cover;
+	background-position: center center;
+}
+
+.landing h2 {
+	padding-top: 150px;
+	margin-bottom: 50px;
+	font-size: 40px;
+}
+
+.landing p {
+	font-size: 18px;
+}
+
+
+/* ------------------ */
+
+/* float 3단 배치 + margin 간격 조정 */
+.images {
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	overflow: hidden;
+}
+
+.image-box {
+	float: left;
+	width: 310px;
+	margin-right: 15px;
+	overflow: hidden;
+}
+
+.image-box:last-child {
+	margin-right: 0px;
+}
+
+/* 이거 해오면 RWD 좀 아시는 분*/
+.image-box > img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+/* ------------------ */
+
+.contacts {
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.contacts > h2 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.contacts > p {
+	margin-bottom: 20px;
+}
+
+.contact {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+label, .contact > h5 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+label {
+	margin-right: 10px;
+}
+
+/* 이건 없어도 상관 없음 <br>로 대체 가능 */
+textarea {
+	display: block;
+}
+
+
+/* ------------------ */
+
+.footer {
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #ffffff;
+	text-align: center;
+	background-color: #333333;
+}
